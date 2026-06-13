@@ -356,7 +356,7 @@ mrb_mruby_regexp_pcre_gem_init(mrb_state *mrb)
   md = mrb_define_class(mrb, "MatchData", mrb->object_class);
   MRB_SET_INSTANCE_TT(md, MRB_TT_DATA);
 
-  mrb_define_method(mrb, md, "initialize", mrb_matchdata_init, MRB_ARGS_REQ(1));
+  mrb_define_method(mrb, md, "initialize", mrb_matchdata_init, MRB_ARGS_NONE());
   mrb_define_method(mrb, md, "initialize_copy", mrb_matchdata_init_copy, MRB_ARGS_REQ(1));
   mrb_define_method(mrb, md, "begin", mrb_matchdata_begin, MRB_ARGS_REQ(1));
   mrb_define_method(mrb, md, "end", mrb_matchdata_end, MRB_ARGS_REQ(1));
